@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+    environment {
+        DOCKER_IMAGE = "spring" // Replace with your Docker image name
+    }
+    stages {
+        stage('Build') {
+            steps {
+                // Clean and build the Spring Boot application
+                sh './mvnw clean package'
+            }
+        }
+        stage('Docker Build') {
+            steps {
+                // Build the Docker image
+                script {
+                    def dockerImage = docker.build("${DOCKER_IMAGE}:${env.BUILD_ID}", "-f Dockerfile .")
+                    dockerImage.push()
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                // Deploy the Docker container
+                sh "docker run -d -p 9090:8080 ${DOCKER_IMAGE}:${env.BUILD_ID}"
+            }
+        }
+    }
+}
+
