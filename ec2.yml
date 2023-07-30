@@ -6,7 +6,7 @@ Parameters:
     ConstraintDescription: must be the name of an existing EC2 KeyPair.
   RDSStackName:
     Description: 'RDS Stack Name'
-    Type: AWS::CloudFormation::Stack
+    Type: String
     Default: RDSInstance1
   Region:
     Type: String
