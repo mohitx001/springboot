@@ -16,8 +16,8 @@ public class GetDao
 		{
 			Class.forName("com.mysql.jdbc.Driver");
 			String ssm_parameter_name = "SSM_PARAMETER_NAME" ;
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/db","root","AWSDevOps#123");
-			// Connection con = DriverManager.getConnection("jdbc:mysql://DB_HOSTNAME_HERE:3306/db","root","DB_PASSWORD_HERE");
+			Connection con = DriverManager.getConnection("jdbc:mysql://devrds-rdsdatabase-r53aclgkf3df.cjctww1cxlsn.us-east-1.rds.amazonaws.com:3306/db","root","AWSDevOps#123");
+			// Connection con = DriverManager.getConnection("jdbc:mysql://devrds-rdsdatabase-r53aclgkf3df.cjctww1cxlsn.us-east-1.rds.amazonaws.com:3306/db","mohit","mohit123");
 			/*
 				Replace the code to retrieve the db_hostname, db_user, db_password from SSM Parameter Store
 				Replace the code to retrieve the db_hostname, db_user, db_password from Secret Manager
