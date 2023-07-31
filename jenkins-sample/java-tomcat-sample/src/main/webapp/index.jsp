@@ -1,6 +1,6 @@
 <html>
 <body>
-<h2>Enter Employee Name to find in DB!</h2>
+<h2> Please Enter Employee Name to find in DB!</h2>
 	<form action="getUser">
 		<input type="text" name="emp_number">
 		<input type="submit">
