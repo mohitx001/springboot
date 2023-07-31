@@ -11,7 +11,7 @@
 <form action="app_register" method="post">
 			<table style="with: 50%">
 				<tr>
-					<td>First Name</td>
+					<td>Enter your First Name</td>
 					<td><input type="text" name="first_name" /></td>
 				</tr>
 				<tr>
